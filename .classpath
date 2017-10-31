@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/jackson-annotations-2.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/junit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/org.springframework.test-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/org.springframework.test-3.1.2.release.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/ServicesApp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-boot-1.2.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-boot-autoconfigure-1.2.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-boot-starter-test-1.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-boot-test-1.4.0.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-test-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/meghnaj/Desktop/jar_files/spring-test-3.2.2.release-sources.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

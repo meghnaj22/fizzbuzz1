@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FizzBuzz!</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<style>
+.limit {
+	max-width: 520px;
+	word-wrap: break-word;
+}
+</style>
+<script type="text/javascript">
+	angular
+			.module("fizzBuzzApp", [])
+			.controller(
+					"fizzBuzzController",
+					function($scope, $http) {
+						$scope.data = {
+							inputValue : 100,
+							fizz : '',
+							buzz : '',
+							fizzBuzz : ''
+						}
+						var getFizzBuzz = function() {
+							$scope.data.fizz = ''
+							$scope.data.buzz = ''
+							$scope.data.fizzBuzz = ''
+							$scope.data.inputValue !== ''
+									&& $scope.data.inputValue !== undefined
+									&& $http
+											.get(
+													"/fizzbuzz/"
+															+ $scope.data.inputValue)
+											.then(
+													function(response) {
+														if (response.status === 200) {
+															$scope.data.fizz = response.data.Fizz
+																	.toString()
+															$scope.data.buzz = response.data.Buzz
+																	.toString()
+															$scope.data.fizzBuzz = response.data.FizzBuzz
+																	.toString()
+														}
+													})
+						}
+						$scope.getFizzBuzz = getFizzBuzz
+						getFizzBuzz()
+					})
+</script>
+</head>
+<body ng-app="fizzBuzzApp">
+	<section class="hero is-info is-bold">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">FizzBuzz</h1>
+				
+				<div>
+					<h2>Developed By Meghna</h2>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+	<section class="section">
+
+		<div class="container is-fluid">
+			<div class="tile is-ancestor" ng-controller="fizzBuzzController">
+
+				<div class="tile is-parent">
+					<div class="tile is-child box">
+						<p class="title">Enter the value</p>
+						<div class="content">
+							<div class="field">
+
+								<div class="control">
+									<input class="input" type="text"
+										placeholder="Value example: 100" ng-model="data.inputValue">
+								</div>
+							</div>
+							<div class="field">
+
+								<div class="control">
+									<button ng-click="getFizzBuzz()" class="button is-info">submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tile is-vertical">
+					<div class="tile">
+						<div class="tile is-parent is-vertical">
+							<article class="tile is-child notification is-primary">
+								<p class="title">Fizz</p>
+								<div class="content limit">{{data.fizz}}</div>
+							</article>
+							<article class="tile is-child notification is-warning">
+								<p class="title">Buzz</p>
+								<div class="content limit">{{data.buzz}}</div>
+							</article>
+							<article class="tile is-child notification is-danger">
+								<p class="title">FizzBuzz</p>
+								<div class="content limit">{{data.fizzBuzz}}</div>
+							</article>
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>
